@@ -1,0 +1,9 @@
+/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles/OpenGlProject.dir
+/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles/edit_cache.dir
+/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles/rebuild_cache.dir
+/home/joosaraiva/Projects/C++/OpenGlProject/build/lib/glfw/src/CMakeFiles/edit_cache.dir
+/home/joosaraiva/Projects/C++/OpenGlProject/build/lib/glfw/src/CMakeFiles/rebuild_cache.dir
+/home/joosaraiva/Projects/C++/OpenGlProject/build/lib/glfw/src/src/CMakeFiles/glfw.dir
+/home/joosaraiva/Projects/C++/OpenGlProject/build/lib/glfw/src/src/CMakeFiles/update_mappings.dir
+/home/joosaraiva/Projects/C++/OpenGlProject/build/lib/glfw/src/src/CMakeFiles/edit_cache.dir
+/home/joosaraiva/Projects/C++/OpenGlProject/build/lib/glfw/src/src/CMakeFiles/rebuild_cache.dir
