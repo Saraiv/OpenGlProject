@@ -26,8 +26,8 @@ set(SOURCES
     ${CMAKE_SOURCE_DIR}/src/Source.cpp
     ${CMAKE_SOURCE_DIR}/src/Camera/Camera.cpp
     ${CMAKE_SOURCE_DIR}/src/Camera/Camera.hpp
-    ${CMAKE_SOURCE_DIR}/src/PoolTable/PoolTable.cpp
-    ${CMAKE_SOURCE_DIR}/src/PoolTable/PoolTable.hpp
+    ${CMAKE_SOURCE_DIR}/src/Planets/Planets.cpp
+    ${CMAKE_SOURCE_DIR}/src/Planets/Planets.hpp
     ${CMAKE_SOURCE_DIR}/src/Shaders/Shaders.cpp
     ${CMAKE_SOURCE_DIR}/src/Shaders/Shaders.hpp
 )

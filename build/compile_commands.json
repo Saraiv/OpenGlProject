@@ -11,8 +11,8 @@
 },
 {
   "directory": "/home/joosaraiva/Projects/C++/OpenGlProject/build",
-  "command": "/usr/bin/c++  -I/home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/include -g -o CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.o -c /home/joosaraiva/Projects/C++/OpenGlProject/src/PoolTable/PoolTable.cpp",
-  "file": "/home/joosaraiva/Projects/C++/OpenGlProject/src/PoolTable/PoolTable.cpp"
+  "command": "/usr/bin/c++  -I/home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/include -g -o CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o -c /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.cpp",
+  "file": "/home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.cpp"
 },
 {
   "directory": "/home/joosaraiva/Projects/C++/OpenGlProject/build",

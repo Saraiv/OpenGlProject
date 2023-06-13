@@ -1,7 +1,8 @@
-CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: \
- /home/joosaraiva/Projects/C++/OpenGlProject/src/Source.cpp \
- /usr/include/stdc-predef.h /usr/include/GL/glew.h \
- /usr/include/c++/11/cstddef \
+CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o: \
+ /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.cpp \
+ /usr/include/stdc-predef.h \
+ /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.hpp \
+ /usr/include/GL/glew.h /usr/include/c++/11/cstddef \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -25,10 +26,6 @@ CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h /usr/include/GL/glu.h \
  /usr/include/GL/gl.h \
  /home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/include/GLFW/glfw3.h \
- /home/joosaraiva/Projects/C++/OpenGlProject/src/Camera/Camera.hpp \
- /usr/include/glm/ext.hpp /usr/include/glm/detail/setup.hpp \
- /usr/include/c++/11/cassert /usr/include/assert.h \
- /usr/include/glm/simd/platform.h /usr/include/c++/11/type_traits \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/c++/11/cmath /usr/include/c++/11/bits/cpp_type_traits.h \
  /usr/include/c++/11/ext/type_traits.h /usr/include/math.h \
@@ -76,6 +73,7 @@ CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: \
  /usr/include/c++/11/bits/exception_defines.h \
  /usr/include/c++/11/ext/numeric_traits.h \
  /usr/include/c++/11/bits/stl_pair.h /usr/include/c++/11/bits/move.h \
+ /usr/include/c++/11/type_traits \
  /usr/include/c++/11/bits/stl_iterator_base_types.h \
  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/11/bits/concept_check.h \
@@ -94,7 +92,10 @@ CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: \
  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/include/c++/11/climits \
+ /usr/include/c++/11/tr1/riemann_zeta.tcc \
+ /usr/include/glm/detail/setup.hpp /usr/include/c++/11/cassert \
+ /usr/include/assert.h /usr/include/glm/simd/platform.h \
+ /usr/include/c++/11/climits \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -215,133 +216,8 @@ CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: \
  /usr/include/glm/packing.hpp /usr/include/glm/detail/func_packing.inl \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
- /usr/include/glm/detail/func_integer.inl \
- /usr/include/glm/ext/matrix_clip_space.hpp \
- /usr/include/glm/ext/scalar_constants.hpp \
- /usr/include/glm/ext/scalar_constants.inl \
- /usr/include/glm/ext/matrix_clip_space.inl \
- /usr/include/glm/ext/matrix_common.hpp \
- /usr/include/glm/detail/_fixes.hpp \
- /usr/include/glm/ext/matrix_common.inl \
- /usr/include/glm/ext/matrix_int2x2.hpp \
- /usr/include/glm/ext/matrix_int2x2_sized.hpp \
- /usr/include/glm/ext/matrix_int2x3.hpp \
- /usr/include/glm/ext/matrix_int2x3_sized.hpp \
- /usr/include/glm/ext/matrix_int2x4.hpp \
- /usr/include/glm/ext/matrix_int2x4_sized.hpp \
- /usr/include/glm/ext/matrix_int3x2.hpp \
- /usr/include/glm/ext/matrix_int3x2_sized.hpp \
- /usr/include/glm/ext/matrix_int3x3.hpp \
- /usr/include/glm/ext/matrix_int3x3_sized.hpp \
- /usr/include/glm/ext/matrix_int3x4.hpp \
- /usr/include/glm/ext/matrix_int3x4_sized.hpp \
- /usr/include/glm/ext/matrix_int4x2.hpp \
- /usr/include/glm/ext/matrix_int4x2_sized.hpp \
- /usr/include/glm/ext/matrix_int4x3.hpp \
- /usr/include/glm/ext/matrix_int4x3_sized.hpp \
- /usr/include/glm/ext/matrix_int4x4.hpp \
- /usr/include/glm/ext/matrix_int4x4_sized.hpp \
- /usr/include/glm/ext/matrix_uint2x2.hpp \
- /usr/include/glm/ext/matrix_uint2x2_sized.hpp \
- /usr/include/glm/ext/matrix_uint2x3.hpp \
- /usr/include/glm/ext/matrix_uint2x3_sized.hpp \
- /usr/include/glm/ext/matrix_uint2x4.hpp \
- /usr/include/glm/ext/matrix_uint2x4_sized.hpp \
- /usr/include/glm/ext/matrix_uint3x2.hpp \
- /usr/include/glm/ext/matrix_uint3x2_sized.hpp \
- /usr/include/glm/ext/matrix_uint3x3.hpp \
- /usr/include/glm/ext/matrix_uint3x3_sized.hpp \
- /usr/include/glm/ext/matrix_uint3x4.hpp \
- /usr/include/glm/ext/matrix_uint3x4_sized.hpp \
- /usr/include/glm/ext/matrix_uint4x2.hpp \
- /usr/include/glm/ext/matrix_uint4x2_sized.hpp \
- /usr/include/glm/ext/matrix_uint4x3.hpp \
- /usr/include/glm/ext/matrix_uint4x3_sized.hpp \
- /usr/include/glm/ext/matrix_uint4x4.hpp \
- /usr/include/glm/ext/matrix_uint4x4_sized.hpp \
- /usr/include/glm/ext/matrix_projection.hpp \
- /usr/include/glm/gtc/constants.hpp /usr/include/glm/gtc/constants.inl \
- /usr/include/glm/ext/matrix_projection.inl \
- /usr/include/glm/ext/matrix_relational.hpp \
- /usr/include/glm/ext/matrix_relational.inl \
- /usr/include/glm/ext/vector_relational.hpp \
- /usr/include/glm/ext/vector_relational.inl \
- /usr/include/glm/detail/type_float.hpp \
- /usr/include/glm/ext/matrix_transform.hpp \
- /usr/include/glm/ext/matrix_transform.inl \
- /usr/include/glm/ext/quaternion_common.hpp \
- /usr/include/glm/ext/quaternion_geometric.hpp \
- /usr/include/glm/ext/quaternion_geometric.inl \
- /usr/include/glm/ext/quaternion_common.inl \
- /usr/include/glm/ext/quaternion_double.hpp \
- /usr/include/glm/detail/type_quat.hpp \
- /usr/include/glm/ext/quaternion_relational.hpp \
- /usr/include/glm/ext/quaternion_relational.inl \
- /usr/include/glm/gtc/matrix_transform.hpp \
- /usr/include/glm/gtc/matrix_transform.inl \
- /usr/include/glm/detail/type_quat.inl \
- /usr/include/glm/ext/quaternion_double_precision.hpp \
- /usr/include/glm/ext/quaternion_float.hpp \
- /usr/include/glm/ext/quaternion_float_precision.hpp \
- /usr/include/glm/ext/quaternion_exponential.hpp \
- /usr/include/glm/ext/quaternion_exponential.inl \
- /usr/include/glm/ext/quaternion_transform.hpp \
- /usr/include/glm/ext/quaternion_transform.inl \
- /usr/include/glm/ext/quaternion_trigonometric.hpp \
- /usr/include/glm/ext/quaternion_trigonometric.inl \
- /usr/include/glm/ext/scalar_common.hpp \
- /usr/include/glm/ext/scalar_common.inl \
- /usr/include/glm/ext/scalar_integer.hpp \
- /usr/include/glm/ext/scalar_integer.inl \
- /usr/include/glm/ext/scalar_packing.hpp \
- /usr/include/glm/ext/scalar_packing.inl \
- /usr/include/glm/ext/scalar_relational.hpp \
- /usr/include/glm/ext/scalar_relational.inl \
- /usr/include/glm/ext/scalar_ulp.hpp /usr/include/glm/ext/scalar_ulp.inl \
- /usr/include/glm/ext/vector_common.hpp \
- /usr/include/glm/ext/vector_common.inl \
- /usr/include/glm/ext/vector_integer.hpp \
- /usr/include/glm/ext/vector_integer.inl \
- /usr/include/glm/ext/vector_packing.hpp \
- /usr/include/glm/ext/vector_packing.inl \
- /usr/include/glm/ext/vector_ulp.hpp /usr/include/glm/ext/vector_ulp.inl \
- /usr/include/glm/ext/vector_bool1.hpp \
- /usr/include/glm/ext/vector_bool1_precision.hpp \
- /usr/include/glm/ext/vector_double1.hpp \
- /usr/include/glm/ext/vector_double1_precision.hpp \
- /usr/include/glm/ext/vector_float1.hpp \
- /usr/include/glm/ext/vector_float1_precision.hpp \
- /usr/include/glm/ext/vector_int1.hpp \
- /usr/include/glm/ext/vector_int1_sized.hpp \
- /usr/include/glm/ext/vector_uint1.hpp \
- /usr/include/glm/ext/vector_uint1_sized.hpp \
- /usr/include/glm/gtc/bitfield.hpp /usr/include/glm/detail/setup.hpp \
- /usr/include/glm/gtc/type_precision.hpp \
- /usr/include/glm/gtc/quaternion.hpp /usr/include/glm/gtc/quaternion.inl \
- /usr/include/glm/gtc/epsilon.hpp /usr/include/glm/gtc/epsilon.inl \
- /usr/include/glm/gtc/vec1.hpp /usr/include/glm/gtc/type_precision.inl \
- /usr/include/glm/gtc/bitfield.inl /usr/include/glm/simd/integer.h \
- /usr/include/glm/gtc/color_space.hpp \
- /usr/include/glm/gtc/color_space.inl /usr/include/glm/gtc/integer.hpp \
- /usr/include/glm/gtc/integer.inl /usr/include/glm/gtc/matrix_access.hpp \
- /usr/include/glm/gtc/matrix_access.inl \
- /usr/include/glm/gtc/matrix_integer.hpp \
- /usr/include/glm/gtc/matrix_inverse.hpp \
- /usr/include/glm/gtc/matrix_inverse.inl /usr/include/glm/gtc/noise.hpp \
- /usr/include/glm/detail/_noise.hpp /usr/include/glm/gtc/noise.inl \
- /usr/include/glm/gtc/packing.hpp /usr/include/glm/gtc/packing.inl \
- /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
- /usr/include/glm/gtc/random.hpp /usr/include/glm/gtc/random.inl \
- /usr/include/c++/11/cstdlib /usr/include/c++/11/ctime \
- /usr/include/time.h /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/timex.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /usr/include/glm/gtc/reciprocal.hpp /usr/include/glm/gtc/reciprocal.inl \
- /usr/include/glm/gtc/round.hpp /usr/include/glm/gtc/round.inl \
- /usr/include/glm/gtc/type_ptr.hpp /usr/include/glm/gtc/type_ptr.inl \
- /usr/include/glm/gtc/ulp.hpp /usr/include/glm/gtc/ulp.inl \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/allocator.h \
+ /usr/include/glm/detail/func_integer.inl /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
  /usr/include/c++/11/ext/new_allocator.h /usr/include/c++/11/new \
  /usr/include/c++/11/bits/exception.h \
@@ -356,9 +232,9 @@ CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: \
  /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/range_access.h \
- /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/iostream \
- /usr/include/c++/11/ostream /usr/include/c++/11/ios \
- /usr/include/c++/11/iosfwd /usr/include/c++/11/bits/stringfwd.h \
+ /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/string \
+ /usr/include/c++/11/bits/stringfwd.h \
+ /usr/include/c++/11/bits/char_traits.h \
  /usr/include/c++/11/bits/postypes.h /usr/include/c++/11/cwchar \
  /usr/include/wchar.h /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
@@ -366,35 +242,35 @@ CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/c++/11/exception /usr/include/c++/11/bits/exception_ptr.h \
- /usr/include/c++/11/bits/cxxabi_init_exception.h \
- /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/nested_exception.h \
- /usr/include/c++/11/bits/char_traits.h \
  /usr/include/c++/11/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
  /usr/include/c++/11/clocale /usr/include/locale.h \
- /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/11/cctype \
- /usr/include/ctype.h /usr/include/c++/11/bits/ios_base.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/11/iosfwd \
+ /usr/include/c++/11/cctype /usr/include/ctype.h \
+ /usr/include/c++/11/bits/ostream_insert.h \
+ /usr/include/c++/11/bits/cxxabi_forced.h \
+ /usr/include/c++/11/bits/stl_function.h \
+ /usr/include/c++/11/backward/binders.h \
+ /usr/include/c++/11/bits/basic_string.h \
  /usr/include/c++/11/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
- /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+ /usr/include/x86_64-linux-gnu/bits/cpu-set.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/timex.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
- /usr/include/c++/11/bits/locale_classes.h /usr/include/c++/11/string \
- /usr/include/c++/11/bits/ostream_insert.h \
- /usr/include/c++/11/bits/cxxabi_forced.h \
- /usr/include/c++/11/bits/stl_function.h \
- /usr/include/c++/11/backward/binders.h \
- /usr/include/c++/11/bits/basic_string.h /usr/include/c++/11/string_view \
- /usr/include/c++/11/bits/string_view.tcc \
- /usr/include/c++/11/ext/string_conversions.h /usr/include/c++/11/cstdio \
- /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+ /usr/include/c++/11/string_view /usr/include/c++/11/bits/string_view.tcc \
+ /usr/include/c++/11/ext/string_conversions.h /usr/include/c++/11/cstdlib \
+ /usr/include/c++/11/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
@@ -405,20 +281,4 @@ CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
- /usr/include/c++/11/bits/basic_string.tcc \
- /usr/include/c++/11/bits/locale_classes.tcc \
- /usr/include/c++/11/system_error \
- /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
- /usr/include/c++/11/stdexcept /usr/include/c++/11/streambuf \
- /usr/include/c++/11/bits/streambuf.tcc \
- /usr/include/c++/11/bits/basic_ios.h \
- /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
- /usr/include/c++/11/bits/streambuf_iterator.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
- /usr/include/c++/11/bits/locale_facets.tcc \
- /usr/include/c++/11/bits/basic_ios.tcc \
- /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/math.h \
- /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.hpp
+ /usr/include/c++/11/bits/basic_string.tcc

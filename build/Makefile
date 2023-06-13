@@ -179,29 +179,29 @@ src/Camera/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.s
 .PHONY : src/Camera/Camera.cpp.s
 
-src/PoolTable/PoolTable.o: src/PoolTable/PoolTable.cpp.o
-.PHONY : src/PoolTable/PoolTable.o
+src/Planets/Planets.o: src/Planets/Planets.cpp.o
+.PHONY : src/Planets/Planets.o
 
 # target to build an object file
-src/PoolTable/PoolTable.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.o
-.PHONY : src/PoolTable/PoolTable.cpp.o
+src/Planets/Planets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o
+.PHONY : src/Planets/Planets.cpp.o
 
-src/PoolTable/PoolTable.i: src/PoolTable/PoolTable.cpp.i
-.PHONY : src/PoolTable/PoolTable.i
+src/Planets/Planets.i: src/Planets/Planets.cpp.i
+.PHONY : src/Planets/Planets.i
 
 # target to preprocess a source file
-src/PoolTable/PoolTable.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.i
-.PHONY : src/PoolTable/PoolTable.cpp.i
+src/Planets/Planets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.i
+.PHONY : src/Planets/Planets.cpp.i
 
-src/PoolTable/PoolTable.s: src/PoolTable/PoolTable.cpp.s
-.PHONY : src/PoolTable/PoolTable.s
+src/Planets/Planets.s: src/Planets/Planets.cpp.s
+.PHONY : src/Planets/Planets.s
 
 # target to generate assembly for a file
-src/PoolTable/PoolTable.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.s
-.PHONY : src/PoolTable/PoolTable.cpp.s
+src/Planets/Planets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.s
+.PHONY : src/Planets/Planets.cpp.s
 
 src/Shaders/Shaders.o: src/Shaders/Shaders.cpp.o
 .PHONY : src/Shaders/Shaders.o
@@ -265,9 +265,9 @@ help:
 	@echo "... src/Camera/Camera.o"
 	@echo "... src/Camera/Camera.i"
 	@echo "... src/Camera/Camera.s"
-	@echo "... src/PoolTable/PoolTable.o"
-	@echo "... src/PoolTable/PoolTable.i"
-	@echo "... src/PoolTable/PoolTable.s"
+	@echo "... src/Planets/Planets.o"
+	@echo "... src/Planets/Planets.i"
+	@echo "... src/Planets/Planets.s"
 	@echo "... src/Shaders/Shaders.o"
 	@echo "... src/Shaders/Shaders.i"
 	@echo "... src/Shaders/Shaders.s"

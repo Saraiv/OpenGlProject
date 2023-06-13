@@ -178,12 +178,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/PoolTable/PoolTable.cpp",
+			"path" : "src/Planets/Planets.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/PoolTable/PoolTable.hpp",
+			"path" : "src/Planets/Planets.hpp",
 			"sourceGroupIndex" : 1
 		},
 		{

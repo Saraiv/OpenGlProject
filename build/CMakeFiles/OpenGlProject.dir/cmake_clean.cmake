@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o"
   "CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o.d"
-  "CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.o"
-  "CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.o.d"
+  "CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o"
+  "CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o.d"
   "CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o"
   "CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o.d"
   "CMakeFiles/OpenGlProject.dir/src/Source.cpp.o"

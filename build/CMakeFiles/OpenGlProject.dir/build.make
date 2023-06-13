@@ -97,19 +97,19 @@ CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joosaraiva/Projects/C++/OpenGlProject/src/Camera/Camera.cpp -o CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.s
 
-CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.o: CMakeFiles/OpenGlProject.dir/flags.make
-CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.o: ../src/PoolTable/PoolTable.cpp
-CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.o: CMakeFiles/OpenGlProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.o -MF CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.o.d -o CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.o -c /home/joosaraiva/Projects/C++/OpenGlProject/src/PoolTable/PoolTable.cpp
+CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o: CMakeFiles/OpenGlProject.dir/flags.make
+CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o: ../src/Planets/Planets.cpp
+CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o: CMakeFiles/OpenGlProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o -MF CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o.d -o CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o -c /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.cpp
 
-CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joosaraiva/Projects/C++/OpenGlProject/src/PoolTable/PoolTable.cpp > CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.i
+CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.cpp > CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.i
 
-CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joosaraiva/Projects/C++/OpenGlProject/src/PoolTable/PoolTable.cpp -o CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.s
+CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.cpp -o CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.s
 
 CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o: CMakeFiles/OpenGlProject.dir/flags.make
 CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o: ../src/Shaders/Shaders.cpp
@@ -129,7 +129,7 @@ CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.s: cmake_force
 OpenGlProject_OBJECTS = \
 "CMakeFiles/OpenGlProject.dir/src/Source.cpp.o" \
 "CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o" \
-"CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.o" \
+"CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o" \
 "CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o"
 
 # External object files for target OpenGlProject
@@ -137,7 +137,7 @@ OpenGlProject_EXTERNAL_OBJECTS =
 
 OpenGlProject: CMakeFiles/OpenGlProject.dir/src/Source.cpp.o
 OpenGlProject: CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o
-OpenGlProject: CMakeFiles/OpenGlProject.dir/src/PoolTable/PoolTable.cpp.o
+OpenGlProject: CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o
 OpenGlProject: CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o
 OpenGlProject: CMakeFiles/OpenGlProject.dir/build.make
 OpenGlProject: lib/glfw/src/src/libglfw3.a
