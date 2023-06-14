@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/joosaraiva/Projects/C++/OpenGlProject/src/Camera/Camera.cpp" "CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o" "gcc" "CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o.d"
+  "/home/joosaraiva/Projects/C++/OpenGlProject/src/Lights/Lights.cpp" "CMakeFiles/OpenGlProject.dir/src/Lights/Lights.cpp.o" "gcc" "CMakeFiles/OpenGlProject.dir/src/Lights/Lights.cpp.o.d"
   "/home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.cpp" "CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o" "gcc" "CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o.d"
   "/home/joosaraiva/Projects/C++/OpenGlProject/src/Shaders/Shaders.cpp" "CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o" "gcc" "CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o.d"
   "/home/joosaraiva/Projects/C++/OpenGlProject/src/Source.cpp" "CMakeFiles/OpenGlProject.dir/src/Source.cpp.o" "gcc" "CMakeFiles/OpenGlProject.dir/src/Source.cpp.o.d"

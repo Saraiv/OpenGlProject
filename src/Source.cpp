@@ -5,6 +5,7 @@
 #include "Camera/Camera.hpp"
 #include "Planets/Planets.hpp"
 #include "Shaders/Shaders.hpp"
+#include "Lights/Lights.hpp"
 
 #define WIDTH 800
 #define HEIGHT 600
@@ -13,17 +14,17 @@ using namespace std;
 using namespace glm;
 using namespace Cam;
 using namespace Planet;
+using namespace Light;
 
 vector<vec3> planetPosition{
     vec3(0.0f, 0.0f, 0.0f)
 };
 mat4 planetMatrix = mat4(1.0f);
-double lastMouseX = 0, lastMouseY = 0;
-bool isMouseDragging = false;
 float zoomLevel = 1.0f, angle = 0.0f;
 GLuint shader, vertexId, texturesId, normalsId, textureId;
 
-void initPlanets();
+void InitPlanets();
+void GraphicsInfo();
 void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset);
 
 int main(int, char**){
@@ -35,18 +36,21 @@ int main(int, char**){
     if(!glfwInit()) return -1;
 
     window = glfwCreateWindow(800, 600, "Planets", NULL, NULL);
+    if (window == NULL){ glfwTerminate(); return -1; }
     glfwMakeContextCurrent(window);
 
+    GraphicsInfo();
     glfwSetScrollCallback(window, ScrollCallback);
 
     glewExperimental = GL_TRUE;
     glewInit();
 
-    initPlanets();
+    InitPlanets();
     Planets sun;
     sun.GetPointersId(shader, vertexId, normalsId, texturesId, textureId, 0);
     sun.Read("Sun.obj");
     sun.Send();
+    Lights(&sun, shader);
 
     while(!glfwWindowShouldClose(window)){
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -63,8 +67,8 @@ int main(int, char**){
     return 0;
 }
 
-void initPlanets(){
-    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+void InitPlanets(){
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
 
@@ -82,6 +86,24 @@ void initPlanets(){
 	normalsId = glGetProgramResourceLocation(shader, GL_PROGRAM_INPUT, "vertexNormals");
 
 	textureId = glGetProgramResourceLocation(shader, GL_UNIFORM, "textureSampler");
+
+    cout << "shader main: " << shader << endl;
+    cout << "vertex id main: " << vertexId << endl;
+    cout << "textures id main: " << texturesId << endl;
+    cout << "normals id main: " << normalsId << endl;
+    cout << "texture id main: " << textureId << endl;
+}
+
+void GraphicsInfo(){
+    const GLubyte* renderer = glGetString(GL_RENDERER);
+    const GLubyte* vendor = glGetString(GL_VENDOR);
+    const GLubyte* version = glGetString(GL_VERSION);
+    const GLubyte* glslVersion = glGetString(GL_SHADING_LANGUAGE_VERSION);
+
+    std::cout << "Renderer: " << renderer << std::endl;
+    std::cout << "Vendor: " << vendor << std::endl;
+    std::cout << "OpenGL version: " << version << std::endl;
+    std::cout << "GLSL version: " << glslVersion << std::endl;
 }
 
 void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset) {

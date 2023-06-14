@@ -82,6 +82,10 @@ void Planets::Read(const string fileName){
         ss.clear();
     }
 
+    cout << "vertex size: " << vertex_positions.size()  << endl;
+    cout << "texture size: " << vertex_textures_coords.size()  << endl;
+    cout << "normals size: " << vertex_normals.size()  << endl;
+
     inFile.close();
 }
 
@@ -118,6 +122,11 @@ void Planets::Material(const string fileName){
     }
 
     inFile.close();
+
+    cout << "Ka: " << ka.x << "/" <<  ka.y << "/" << ka.z << endl;
+    cout << "Kd: " << kd.x << "/" <<  kd.y << "/" << kd.z << endl;
+    cout << "Ks: " << ks.x << "/" <<  ks.y << "/" << ks.z << endl;
+    cout << "Ns: " << ns  << endl;
 }
 
 void Planets::Texture(const string textureFile){
@@ -197,6 +206,12 @@ void Planets::Send(void){
 	glEnableVertexAttribArray(texturesId);
 
     glProgramUniform1i(shader, textureId, 0);
+    
+    cout << "shader: " << shader << endl;
+    cout << "vertex id: " << vertexId << endl;
+    cout << "normal id: " << normalsId << endl;
+    cout << "textures id: " << texturesId << endl;
+    cout << "texture id: " << textureId << endl;
 }
 
 

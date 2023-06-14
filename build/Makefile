@@ -237,6 +237,30 @@ src/Camera/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.s
 .PHONY : src/Camera/Camera.cpp.s
 
+src/Lights/Lights.o: src/Lights/Lights.cpp.o
+.PHONY : src/Lights/Lights.o
+
+# target to build an object file
+src/Lights/Lights.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/Lights/Lights.cpp.o
+.PHONY : src/Lights/Lights.cpp.o
+
+src/Lights/Lights.i: src/Lights/Lights.cpp.i
+.PHONY : src/Lights/Lights.i
+
+# target to preprocess a source file
+src/Lights/Lights.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/Lights/Lights.cpp.i
+.PHONY : src/Lights/Lights.cpp.i
+
+src/Lights/Lights.s: src/Lights/Lights.cpp.s
+.PHONY : src/Lights/Lights.s
+
+# target to generate assembly for a file
+src/Lights/Lights.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/Lights/Lights.cpp.s
+.PHONY : src/Lights/Lights.cpp.s
+
 src/Planets/Planets.o: src/Planets/Planets.cpp.o
 .PHONY : src/Planets/Planets.o
 
@@ -328,6 +352,9 @@ help:
 	@echo "... src/Camera/Camera.o"
 	@echo "... src/Camera/Camera.i"
 	@echo "... src/Camera/Camera.s"
+	@echo "... src/Lights/Lights.o"
+	@echo "... src/Lights/Lights.i"
+	@echo "... src/Lights/Lights.s"
 	@echo "... src/Planets/Planets.o"
 	@echo "... src/Planets/Planets.i"
 	@echo "... src/Planets/Planets.s"

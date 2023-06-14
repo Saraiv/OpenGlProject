@@ -31,6 +31,8 @@ set(SOURCES
     ${CMAKE_SOURCE_DIR}/src/Planets/Planets.hpp
     ${CMAKE_SOURCE_DIR}/src/Shaders/Shaders.cpp
     ${CMAKE_SOURCE_DIR}/src/Shaders/Shaders.hpp
+    ${CMAKE_SOURCE_DIR}/src/Lights/Lights.cpp
+    ${CMAKE_SOURCE_DIR}/src/Lights/Lights.hpp
 )
 
 #Exec
