@@ -3,6 +3,9 @@
 static const GLchar* ReadShader(const char* filename) {
 	// Abre o ficheiro 'filename' em binário, e coloca-se na última posição do ficheiro.
 	std::ifstream ficheiro(filename, std::ifstream::ate | std::ifstream::binary);
+	if (!ficheiro.good())
+		std::cerr << "O ficheiro '" << filename << "' não existe." << std::endl;
+	
 	// Se o ficheiro foi aberto.
 	if (ficheiro.is_open()) {
 		// Leitura da próxima posição de leitura.
