@@ -216,7 +216,53 @@ CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o: \
  /usr/include/glm/packing.hpp /usr/include/glm/detail/func_packing.inl \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
- /usr/include/glm/detail/func_integer.inl /usr/include/c++/11/vector \
+ /usr/include/glm/detail/func_integer.inl \
+ /usr/include/glm/gtc/type_ptr.hpp /usr/include/glm/gtc/quaternion.hpp \
+ /usr/include/glm/gtc/constants.hpp \
+ /usr/include/glm/ext/scalar_constants.hpp \
+ /usr/include/glm/ext/scalar_constants.inl \
+ /usr/include/glm/gtc/constants.inl \
+ /usr/include/glm/gtc/matrix_transform.hpp \
+ /usr/include/glm/ext/matrix_projection.hpp \
+ /usr/include/glm/ext/matrix_projection.inl \
+ /usr/include/glm/ext/matrix_clip_space.hpp \
+ /usr/include/glm/ext/matrix_clip_space.inl \
+ /usr/include/glm/ext/matrix_transform.hpp \
+ /usr/include/glm/ext/matrix_transform.inl \
+ /usr/include/glm/gtc/matrix_transform.inl \
+ /usr/include/glm/ext/vector_relational.hpp \
+ /usr/include/glm/ext/vector_relational.inl \
+ /usr/include/glm/detail/type_float.hpp \
+ /usr/include/glm/ext/quaternion_common.hpp \
+ /usr/include/glm/ext/quaternion_geometric.hpp \
+ /usr/include/glm/ext/quaternion_geometric.inl \
+ /usr/include/glm/ext/quaternion_common.inl \
+ /usr/include/glm/ext/quaternion_float.hpp \
+ /usr/include/glm/detail/type_quat.hpp \
+ /usr/include/glm/ext/quaternion_relational.hpp \
+ /usr/include/glm/ext/quaternion_relational.inl \
+ /usr/include/glm/detail/type_quat.inl \
+ /usr/include/glm/ext/quaternion_float_precision.hpp \
+ /usr/include/glm/ext/quaternion_double.hpp \
+ /usr/include/glm/ext/quaternion_double_precision.hpp \
+ /usr/include/glm/ext/quaternion_trigonometric.hpp \
+ /usr/include/glm/ext/quaternion_trigonometric.inl \
+ /usr/include/glm/ext/quaternion_transform.hpp \
+ /usr/include/glm/ext/quaternion_transform.inl \
+ /usr/include/glm/gtc/quaternion.inl /usr/include/glm/gtc/epsilon.hpp \
+ /usr/include/glm/detail/setup.hpp /usr/include/glm/gtc/epsilon.inl \
+ /usr/include/glm/gtc/vec1.hpp /usr/include/glm/ext/vector_bool1.hpp \
+ /usr/include/glm/ext/vector_bool1_precision.hpp \
+ /usr/include/glm/ext/vector_float1.hpp \
+ /usr/include/glm/ext/vector_float1_precision.hpp \
+ /usr/include/glm/ext/vector_double1.hpp \
+ /usr/include/glm/ext/vector_double1_precision.hpp \
+ /usr/include/glm/ext/vector_int1.hpp \
+ /usr/include/glm/ext/vector_int1_sized.hpp \
+ /usr/include/glm/ext/vector_uint1.hpp \
+ /usr/include/glm/ext/vector_uint1_sized.hpp /usr/include/c++/11/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/glm/gtc/type_ptr.inl /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
  /usr/include/c++/11/ext/new_allocator.h /usr/include/c++/11/new \
@@ -281,4 +327,114 @@ CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
- /usr/include/c++/11/bits/basic_string.tcc
+ /usr/include/c++/11/bits/basic_string.tcc /usr/include/c++/11/fstream \
+ /usr/include/c++/11/istream /usr/include/c++/11/ios \
+ /usr/include/c++/11/exception /usr/include/c++/11/bits/exception_ptr.h \
+ /usr/include/c++/11/bits/cxxabi_init_exception.h \
+ /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/nested_exception.h \
+ /usr/include/c++/11/bits/ios_base.h \
+ /usr/include/c++/11/bits/locale_classes.h \
+ /usr/include/c++/11/bits/locale_classes.tcc \
+ /usr/include/c++/11/system_error \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
+ /usr/include/c++/11/stdexcept /usr/include/c++/11/streambuf \
+ /usr/include/c++/11/bits/streambuf.tcc \
+ /usr/include/c++/11/bits/basic_ios.h \
+ /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+ /usr/include/c++/11/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+ /usr/include/c++/11/bits/locale_facets.tcc \
+ /usr/include/c++/11/bits/basic_ios.tcc /usr/include/c++/11/ostream \
+ /usr/include/c++/11/bits/ostream.tcc \
+ /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/sstream \
+ /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iostream \
+ /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/../Camera/Camera.hpp \
+ /usr/include/glm/ext.hpp /usr/include/glm/ext/matrix_common.hpp \
+ /usr/include/glm/detail/_fixes.hpp \
+ /usr/include/glm/ext/matrix_common.inl \
+ /usr/include/glm/ext/matrix_int2x2.hpp \
+ /usr/include/glm/ext/matrix_int2x2_sized.hpp \
+ /usr/include/glm/ext/matrix_int2x3.hpp \
+ /usr/include/glm/ext/matrix_int2x3_sized.hpp \
+ /usr/include/glm/ext/matrix_int2x4.hpp \
+ /usr/include/glm/ext/matrix_int2x4_sized.hpp \
+ /usr/include/glm/ext/matrix_int3x2.hpp \
+ /usr/include/glm/ext/matrix_int3x2_sized.hpp \
+ /usr/include/glm/ext/matrix_int3x3.hpp \
+ /usr/include/glm/ext/matrix_int3x3_sized.hpp \
+ /usr/include/glm/ext/matrix_int3x4.hpp \
+ /usr/include/glm/ext/matrix_int3x4_sized.hpp \
+ /usr/include/glm/ext/matrix_int4x2.hpp \
+ /usr/include/glm/ext/matrix_int4x2_sized.hpp \
+ /usr/include/glm/ext/matrix_int4x3.hpp \
+ /usr/include/glm/ext/matrix_int4x3_sized.hpp \
+ /usr/include/glm/ext/matrix_int4x4.hpp \
+ /usr/include/glm/ext/matrix_int4x4_sized.hpp \
+ /usr/include/glm/ext/matrix_uint2x2.hpp \
+ /usr/include/glm/ext/matrix_uint2x2_sized.hpp \
+ /usr/include/glm/ext/matrix_uint2x3.hpp \
+ /usr/include/glm/ext/matrix_uint2x3_sized.hpp \
+ /usr/include/glm/ext/matrix_uint2x4.hpp \
+ /usr/include/glm/ext/matrix_uint2x4_sized.hpp \
+ /usr/include/glm/ext/matrix_uint3x2.hpp \
+ /usr/include/glm/ext/matrix_uint3x2_sized.hpp \
+ /usr/include/glm/ext/matrix_uint3x3.hpp \
+ /usr/include/glm/ext/matrix_uint3x3_sized.hpp \
+ /usr/include/glm/ext/matrix_uint3x4.hpp \
+ /usr/include/glm/ext/matrix_uint3x4_sized.hpp \
+ /usr/include/glm/ext/matrix_uint4x2.hpp \
+ /usr/include/glm/ext/matrix_uint4x2_sized.hpp \
+ /usr/include/glm/ext/matrix_uint4x3.hpp \
+ /usr/include/glm/ext/matrix_uint4x3_sized.hpp \
+ /usr/include/glm/ext/matrix_uint4x4.hpp \
+ /usr/include/glm/ext/matrix_uint4x4_sized.hpp \
+ /usr/include/glm/ext/matrix_relational.hpp \
+ /usr/include/glm/ext/matrix_relational.inl \
+ /usr/include/glm/ext/quaternion_exponential.hpp \
+ /usr/include/glm/ext/quaternion_exponential.inl \
+ /usr/include/glm/ext/scalar_common.hpp \
+ /usr/include/glm/ext/scalar_common.inl \
+ /usr/include/glm/ext/scalar_integer.hpp \
+ /usr/include/glm/ext/scalar_integer.inl \
+ /usr/include/glm/ext/scalar_packing.hpp \
+ /usr/include/glm/ext/scalar_packing.inl \
+ /usr/include/glm/ext/scalar_relational.hpp \
+ /usr/include/glm/ext/scalar_relational.inl \
+ /usr/include/glm/ext/scalar_ulp.hpp /usr/include/glm/ext/scalar_ulp.inl \
+ /usr/include/glm/ext/vector_common.hpp \
+ /usr/include/glm/ext/vector_common.inl \
+ /usr/include/glm/ext/vector_integer.hpp \
+ /usr/include/glm/ext/vector_integer.inl \
+ /usr/include/glm/ext/vector_packing.hpp \
+ /usr/include/glm/ext/vector_packing.inl \
+ /usr/include/glm/ext/vector_ulp.hpp /usr/include/glm/ext/vector_ulp.inl \
+ /usr/include/glm/gtc/bitfield.hpp \
+ /usr/include/glm/gtc/type_precision.hpp \
+ /usr/include/glm/gtc/type_precision.inl \
+ /usr/include/glm/gtc/bitfield.inl /usr/include/glm/simd/integer.h \
+ /usr/include/glm/gtc/color_space.hpp \
+ /usr/include/glm/gtc/color_space.inl /usr/include/glm/gtc/integer.hpp \
+ /usr/include/glm/gtc/integer.inl /usr/include/glm/gtc/matrix_access.hpp \
+ /usr/include/glm/gtc/matrix_access.inl \
+ /usr/include/glm/gtc/matrix_integer.hpp \
+ /usr/include/glm/gtc/matrix_inverse.hpp \
+ /usr/include/glm/gtc/matrix_inverse.inl /usr/include/glm/gtc/noise.hpp \
+ /usr/include/glm/detail/_noise.hpp /usr/include/glm/gtc/noise.inl \
+ /usr/include/glm/gtc/packing.hpp /usr/include/glm/gtc/packing.inl \
+ /usr/include/glm/gtc/random.hpp /usr/include/glm/gtc/random.inl \
+ /usr/include/c++/11/ctime /usr/include/glm/gtc/reciprocal.hpp \
+ /usr/include/glm/gtc/reciprocal.inl /usr/include/glm/gtc/round.hpp \
+ /usr/include/glm/gtc/round.inl /usr/include/glm/gtc/ulp.hpp \
+ /usr/include/glm/gtc/ulp.inl /usr/include/c++/11/math.h \
+ /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/../Constants/Constants.hpp \
+ /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/../../lib/stb/stb_image.h \
+ /usr/include/c++/11/stdlib.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h

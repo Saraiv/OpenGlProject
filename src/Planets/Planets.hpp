@@ -4,20 +4,29 @@
 #include <GLFW/glfw3.h>
 #include <GL/gl.h>
 #include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
 #include <vector>
 #include <string>
+#include <fstream>
+#include <sstream>
+#include <iostream>
+
+#include "../Camera/Camera.hpp"
+#include "../Constants/Constants.hpp"
 
 using namespace std;
 using namespace glm;
+using namespace Cam;
+using namespace Constants;
 
 namespace Planet{
     class Planets {
         public:
-            void GetPointersId(GLuint shader, GLuint coordsId, GLuint normalsId, GLuint texId, GLuint textureId, int counter);
+            void GetPointersId(GLuint shader, GLuint vertexId, GLuint normalsId, GLuint texturesId, GLuint textureId, int counter);
             void Read(const string fileName);
-            void Send(void);
-            void Material(string fileName);
+            void Material(const string fileName);
             void Texture(const string textureFile);
+            void Send(void);
             void Draw(vec3 position, vec3 orientation, mat4 modelMatrix);
             vec3 ka, kd, ks;
             GLfloat ns;
@@ -26,13 +35,12 @@ namespace Planet{
             float accumulatedRotationY = 0.0f, Ns, angle = 0.0f, ZOOM = 15.0f;
             
             GLuint  VAO, 
-                    Buffers[3],
-                    programa,
+                    VBO[3],
+                    shader,
                     textureName,
-                    NumVertices = 4034,
-                    coordsId,
+                    vertexId,
                     normalsId,
-                    texId,
+                    texturesId,
                     textureId;
             
             vector<vec3> vertex_positions;

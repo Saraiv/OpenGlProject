@@ -3,8 +3,8 @@ lib/glfw/src/src/CMakeFiles/glfw.dir/x11_monitor.c.o: \
  /usr/include/stdc-predef.h \
  /home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/src/internal.h \
  /home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/src/../include/GLFW/glfw3.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -73,7 +73,7 @@ lib/glfw/src/src/CMakeFiles/glfw.dir/x11_monitor.c.o: \
  /usr/include/X11/Xosdefs.h /usr/include/X11/keysym.h \
  /usr/include/X11/keysymdef.h /usr/include/X11/Xatom.h \
  /usr/include/X11/Xresource.h /usr/include/X11/Xcursor/Xcursor.h \
- /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h \
+ /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
@@ -133,8 +133,8 @@ lib/glfw/src/src/CMakeFiles/glfw.dir/x11_monitor.c.o: \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
  /home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/src/posix_time.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h /usr/include/stdlib.h \

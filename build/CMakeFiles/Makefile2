@@ -88,6 +88,7 @@ lib/glfw/src/preinstall: lib/glfw/src/src/preinstall
 .PHONY : lib/glfw/src/preinstall
 
 # Recursive "clean" directory target.
+lib/glfw/src/clean: lib/glfw/src/CMakeFiles/uninstall.dir/clean
 lib/glfw/src/clean: lib/glfw/src/src/clean
 .PHONY : lib/glfw/src/clean
 
@@ -132,6 +133,32 @@ OpenGlProject: CMakeFiles/OpenGlProject.dir/rule
 CMakeFiles/OpenGlProject.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/clean
 .PHONY : CMakeFiles/OpenGlProject.dir/clean
+
+#=============================================================================
+# Target rules for target lib/glfw/src/CMakeFiles/uninstall.dir
+
+# All Build rule for target.
+lib/glfw/src/CMakeFiles/uninstall.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/glfw/src/CMakeFiles/uninstall.dir/build.make lib/glfw/src/CMakeFiles/uninstall.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/glfw/src/CMakeFiles/uninstall.dir/build.make lib/glfw/src/CMakeFiles/uninstall.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles --progress-num= "Built target uninstall"
+.PHONY : lib/glfw/src/CMakeFiles/uninstall.dir/all
+
+# Build rule for subdir invocation for target.
+lib/glfw/src/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glfw/src/CMakeFiles/uninstall.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles 0
+.PHONY : lib/glfw/src/CMakeFiles/uninstall.dir/rule
+
+# Convenience name for target.
+uninstall: lib/glfw/src/CMakeFiles/uninstall.dir/rule
+.PHONY : uninstall
+
+# clean rule for target.
+lib/glfw/src/CMakeFiles/uninstall.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/glfw/src/CMakeFiles/uninstall.dir/build.make lib/glfw/src/CMakeFiles/uninstall.dir/clean
+.PHONY : lib/glfw/src/CMakeFiles/uninstall.dir/clean
 
 #=============================================================================
 # Target rules for target lib/glfw/src/src/CMakeFiles/glfw.dir

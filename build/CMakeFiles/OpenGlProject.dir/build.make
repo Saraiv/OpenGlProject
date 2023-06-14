@@ -73,57 +73,57 @@ CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: CMakeFiles/OpenGlProject.dir/flag
 CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: ../src/Source.cpp
 CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: CMakeFiles/OpenGlProject.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OpenGlProject.dir/src/Source.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGlProject.dir/src/Source.cpp.o -MF CMakeFiles/OpenGlProject.dir/src/Source.cpp.o.d -o CMakeFiles/OpenGlProject.dir/src/Source.cpp.o -c /home/joosaraiva/Projects/C++/OpenGlProject/src/Source.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGlProject.dir/src/Source.cpp.o -MF CMakeFiles/OpenGlProject.dir/src/Source.cpp.o.d -o CMakeFiles/OpenGlProject.dir/src/Source.cpp.o -c /home/joosaraiva/Projects/C++/OpenGlProject/src/Source.cpp
 
 CMakeFiles/OpenGlProject.dir/src/Source.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGlProject.dir/src/Source.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joosaraiva/Projects/C++/OpenGlProject/src/Source.cpp > CMakeFiles/OpenGlProject.dir/src/Source.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joosaraiva/Projects/C++/OpenGlProject/src/Source.cpp > CMakeFiles/OpenGlProject.dir/src/Source.cpp.i
 
 CMakeFiles/OpenGlProject.dir/src/Source.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGlProject.dir/src/Source.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joosaraiva/Projects/C++/OpenGlProject/src/Source.cpp -o CMakeFiles/OpenGlProject.dir/src/Source.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joosaraiva/Projects/C++/OpenGlProject/src/Source.cpp -o CMakeFiles/OpenGlProject.dir/src/Source.cpp.s
 
 CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o: CMakeFiles/OpenGlProject.dir/flags.make
 CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o: ../src/Camera/Camera.cpp
 CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o: CMakeFiles/OpenGlProject.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o -MF CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o.d -o CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o -c /home/joosaraiva/Projects/C++/OpenGlProject/src/Camera/Camera.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o -MF CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o.d -o CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o -c /home/joosaraiva/Projects/C++/OpenGlProject/src/Camera/Camera.cpp
 
 CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joosaraiva/Projects/C++/OpenGlProject/src/Camera/Camera.cpp > CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joosaraiva/Projects/C++/OpenGlProject/src/Camera/Camera.cpp > CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.i
 
 CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joosaraiva/Projects/C++/OpenGlProject/src/Camera/Camera.cpp -o CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joosaraiva/Projects/C++/OpenGlProject/src/Camera/Camera.cpp -o CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.s
 
 CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o: CMakeFiles/OpenGlProject.dir/flags.make
 CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o: ../src/Planets/Planets.cpp
 CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o: CMakeFiles/OpenGlProject.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o -MF CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o.d -o CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o -c /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o -MF CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o.d -o CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.o -c /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.cpp
 
 CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.cpp > CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.cpp > CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.i
 
 CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.cpp -o CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.cpp -o CMakeFiles/OpenGlProject.dir/src/Planets/Planets.cpp.s
 
 CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o: CMakeFiles/OpenGlProject.dir/flags.make
 CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o: ../src/Shaders/Shaders.cpp
 CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o: CMakeFiles/OpenGlProject.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o -MF CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o.d -o CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o -c /home/joosaraiva/Projects/C++/OpenGlProject/src/Shaders/Shaders.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o -MF CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o.d -o CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o -c /home/joosaraiva/Projects/C++/OpenGlProject/src/Shaders/Shaders.cpp
 
 CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joosaraiva/Projects/C++/OpenGlProject/src/Shaders/Shaders.cpp > CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joosaraiva/Projects/C++/OpenGlProject/src/Shaders/Shaders.cpp > CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.i
 
 CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joosaraiva/Projects/C++/OpenGlProject/src/Shaders/Shaders.cpp -o CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joosaraiva/Projects/C++/OpenGlProject/src/Shaders/Shaders.cpp -o CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.s
 
 # Object files for target OpenGlProject
 OpenGlProject_OBJECTS = \

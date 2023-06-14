@@ -23,6 +23,7 @@ add_subdirectory(
 
 #Source files
 set(SOURCES 
+    #Source
     ${CMAKE_SOURCE_DIR}/src/Source.cpp
     ${CMAKE_SOURCE_DIR}/src/Camera/Camera.cpp
     ${CMAKE_SOURCE_DIR}/src/Camera/Camera.hpp

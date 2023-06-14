@@ -421,4 +421,11 @@ CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/math.h \
- /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.hpp
+ /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/Planets.hpp \
+ /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/sstream \
+ /usr/include/c++/11/bits/sstream.tcc \
+ /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/../Constants/Constants.hpp \
+ /home/joosaraiva/Projects/C++/OpenGlProject/src/Shaders/Shaders.hpp

@@ -3,7 +3,7 @@
 uniform mat4 Model;
 uniform mat4 View;
 uniform mat4 ModelView;
-uniform sampler2D texSampler;
+uniform sampler2D textureSampler;
 
 uniform samplerCube cubeMap;
 
@@ -64,8 +64,8 @@ struct Material{
 
 uniform Material material;
 
-in vec3 vPositionEyeSpace;
-in vec3 vNormalEyeSpace;
+in vec3 vPositionPlanetSpace;
+in vec3 vNormalPlanetSpace;
 in vec2 uv;
 
 layout (location = 0) out vec4 fColor;
@@ -82,7 +82,7 @@ void main(){
 	light[1] = calcDirectionalLight(directionalLight);
 	light[2] = calcPointLight(pointLight);
 	light[3] = vec4(0.0);
-	fColor = (emissive +light[0]+ light[1]+light[2]+light[3] + vec4(0.2)) * texture(texSampler, uv);
+	fColor = (emissive +light[0]+ light[1]+light[2]+light[3] + vec4(0.2)) * texture(textureSampler, uv);
 }
 
 vec4 calcAmbientLight(AmbientLight light){
@@ -93,13 +93,13 @@ vec4 calcAmbientLight(AmbientLight light){
 vec4 calcDirectionalLight(DirectionalLight light){
 	vec4 ambient = vec4(material.ambient * light.ambient, 1.0);
 
-	vec3 lightDirectionEyeSpace = (View * vec4(light.direction, 0.0)).xyz;
-	vec3 L = normalize(-lightDirectionEyeSpace);
-	vec3 N = normalize(vNormalEyeSpace);
+	vec3 lightDirectionPlanetSpace = (View * vec4(light.direction, 0.0)).xyz;
+	vec3 L = normalize(-lightDirectionPlanetSpace);
+	vec3 N = normalize(vNormalPlanetSpace);
 	float NdotL = max(dot(N, L), 0.0);
 	vec4 diffuse = vec4(material.diffuse * light.diffuse, 1.0) * NdotL;
 	
-	vec3 V = normalize(-vPositionEyeSpace);
+	vec3 V = normalize(-vPositionPlanetSpace);
 
 	vec3 R = reflect(-L, N);
 	float RdotV = max(dot(R, V), 0.0);
@@ -112,20 +112,20 @@ vec4 calcDirectionalLight(DirectionalLight light){
 vec4 calcPointLight(PointLight light){
 	vec4 ambient = vec4(material.ambient * light.ambient, 1.0);
 
-	vec3 lightPositionEyeSpace = (View * vec4(light.position, 1.0)).xyz;
-	vec3 L = normalize(lightPositionEyeSpace - vPositionEyeSpace);
-	vec3 N = normalize(vNormalEyeSpace);
+	vec3 lightPositionPlanetSpace = (View * vec4(light.position, 1.0)).xyz;
+	vec3 L = normalize(lightPositionPlanetSpace - vPositionPlanetSpace);
+	vec3 N = normalize(vNormalPlanetSpace);
 	float NdotL = max(dot(N, L), 0.0);
 	vec4 diffuse = vec4(material.diffuse * light.diffuse, 1.0) * NdotL;
 
-	vec3 V = normalize(-vPositionEyeSpace);
+	vec3 V = normalize(-vPositionPlanetSpace);
     
 	vec3 R = reflect(-L, N);
 	float RdotV = max(dot(R, V), 0.0);
     
 	vec4 specular = pow(RdotV, material.shininess) * vec4(light.specular * material.specular, 1.0);
 	
-	float dist = length(mat3(View) * light.position - vPositionEyeSpace);
+	float dist = length(mat3(View) * light.position - vPositionPlanetSpace);
 	float attenuation = 1.0 / (light.constant + light.linear * dist + light.quadratic * (dist * dist));
 
 	return (attenuation * (ambient + diffuse + specular));

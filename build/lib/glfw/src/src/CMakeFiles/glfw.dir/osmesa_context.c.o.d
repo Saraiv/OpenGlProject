@@ -9,7 +9,7 @@ lib/glfw/src/src/CMakeFiles/glfw.dir/osmesa_context.c.o: \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
@@ -45,7 +45,7 @@ lib/glfw/src/src/CMakeFiles/glfw.dir/osmesa_context.c.o: \
  /usr/include/strings.h /usr/include/assert.h \
  /home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/src/internal.h \
  /home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/src/../include/GLFW/glfw3.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/src/platform.h \
@@ -81,7 +81,7 @@ lib/glfw/src/src/CMakeFiles/glfw.dir/osmesa_context.c.o: \
  /usr/include/X11/Xosdefs.h /usr/include/X11/keysym.h \
  /usr/include/X11/keysymdef.h /usr/include/X11/Xatom.h \
  /usr/include/X11/Xresource.h /usr/include/X11/Xcursor/Xcursor.h \
- /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h \
+ /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \

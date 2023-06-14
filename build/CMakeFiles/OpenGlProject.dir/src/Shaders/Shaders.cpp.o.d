@@ -1,6 +1,8 @@
 CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o: \
  /home/joosaraiva/Projects/C++/OpenGlProject/src/Shaders/Shaders.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
+ /usr/include/stdc-predef.h \
+ /home/joosaraiva/Projects/C++/OpenGlProject/src/Shaders/Shaders.hpp \
+ /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -150,5 +152,4 @@ CMakeFiles/OpenGlProject.dir/src/Shaders/Shaders.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/GL/glew.h \
- /usr/include/c++/11/cstddef /usr/include/GL/glu.h /usr/include/GL/gl.h \
- /home/joosaraiva/Projects/C++/OpenGlProject/src/Shaders/Shaders.hpp
+ /usr/include/c++/11/cstddef /usr/include/GL/glu.h /usr/include/GL/gl.h
