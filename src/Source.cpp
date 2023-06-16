@@ -40,7 +40,7 @@ void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset);
 void MovePlanets(GLFWwindow* window, double xpos, double ypos);
 void OnClickCallback(GLFWwindow* window, int button, int action, int mods);
 
-int main(int, char**){
+int main(){
     GLFWwindow* window;
     Camera* cam;
     cam = cam->GetInstance();
@@ -177,9 +177,12 @@ void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
 void MovePlanets(GLFWwindow* window, double xpos, double ypos) {
 	if (isMouseDragging) {
 		double deltaX = xpos - lastMouseX;
+        double deltaY = ypos - lastMouseY;
 
-		mat4 rotation = rotate(mat4(1.0f), radians(static_cast<float>(deltaX)), vec3(0.0f, 1.0f, 0.0f));
-		planetMatrix = rotation * planetMatrix;
+		mat4 rotationX = rotate(mat4(1.0f), radians(static_cast<float>(deltaX)), vec3(0.0f, 1.0f, 0.0f));
+		mat4 rotationY = rotate(mat4(1.0f), radians(static_cast<float>(deltaY)), vec3(1.0f, 0.0f, 0.0f));
+        
+		planetMatrix = rotationX * rotationY * planetMatrix;
 
 		lastMouseX = xpos;
 		lastMouseY = ypos;
