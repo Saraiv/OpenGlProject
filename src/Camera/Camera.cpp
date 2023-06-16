@@ -10,7 +10,10 @@ void Camera::InicializeCamera(float fov, float width, float height, vec3 positio
     vec3 camFront = position - target;
     vec3 camRight = cross(camFront, vec3(0.0f, 1.0f, 0.0f));
     vec3 worldUp = -cross(camFront, camRight);
-    projection = perspective(glm::radians(fov), width / height, 0.1f, 100.0f);
+
+    target = position - normalize(camFront);
+
+    projection = perspective(radians(fov), width / height, 0.1f, 100.0f);
     view = lookAt(this->position, target, worldUp);
 }
 

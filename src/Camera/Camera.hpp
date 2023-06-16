@@ -25,7 +25,7 @@ namespace Cam{
             void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
             static Camera* GetInstance();
             void InicializeCamera(float fov, float width, float height, vec3 position, vec3 target);
-            Camera() {
+            Camera(){
                 lastX = 0.0f;
                 lastY = 0.0f;
                 yaw = 0.0f;

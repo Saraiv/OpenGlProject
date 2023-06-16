@@ -51,13 +51,13 @@ void Planets::Read(const string fileName){
             } else if(pre == "v"){
                 ss >> vec3Aux.x >> vec3Aux.y >> vec3Aux.z;
                 vertexPosition.push_back(vec3Aux);
-            } else if(pre == "vt"){
-                ss >> vec2Aux.x >> vec2Aux.y;
-                vertexTextureCoord.push_back(vec2Aux);
             } else if(pre == "vn"){
                 ss >> vec3Aux.x >> vec3Aux.y >> vec3Aux.z;
                 vertexNormal.push_back(vec3Aux);
-            }else if(pre == "f"){
+            } else if(pre == "vt"){
+                ss >> vec2Aux.x >> vec2Aux.y;
+                vertexTextureCoord.push_back(vec2Aux);
+            } else if(pre == "f"){
                 for(int i = 0; i < 3; i++){
                     string data;
                     ss >> data;
@@ -65,26 +65,23 @@ void Planets::Read(const string fileName){
 
                     string index;
                     getline(iss, index, '/');
-                    int pIndex = stoi(index) - 1;
-
-                    getline(iss, index, '/');
-                    int tIndex = stoi(index) - 1;
+                    int vIndex = stoi(index) - 1;
 
                     getline(iss, index, '/');
                     int nIndex = stoi(index) - 1;
 
-                    vertex_positions.push_back(vertexPosition[pIndex]);
-                    vertex_textures_coords.push_back(vertexTextureCoord[tIndex]);
+                    getline(iss, index, '/');
+                    int tIndex = stoi(index) - 1;
+
+
+                    vertex_positions.push_back(vertexPosition[vIndex]);
                     vertex_normals.push_back(vertexNormal[nIndex]);
+                    vertex_textures_coords.push_back(vertexTextureCoord[tIndex]);
                 }
             }
         }
         ss.clear();
     }
-
-    cout << "vertex size: " << vertex_positions.size()  << endl;
-    cout << "texture size: " << vertex_textures_coords.size()  << endl;
-    cout << "normals size: " << vertex_normals.size()  << endl;
 
     inFile.close();
 }
@@ -97,7 +94,7 @@ void Planets::Material(const string fileName){
     while(getline(inFile, line)){
         istringstream iss(line);
         std::string pre;
-		std::string texFileName;
+		std::string nextFile;
 
 		iss >> pre;
 
@@ -116,17 +113,12 @@ void Planets::Material(const string fileName){
 		else if(pre == "Ns") // Brightness
 			iss >> ns;
 		else if(pre == "map_Kd"){ // Image
-			iss >> texFileName;
-			Texture(texFileName);
+			iss >> nextFile;
+			Texture(nextFile);
 		}
     }
 
     inFile.close();
-
-    cout << "Ka: " << ka.x << "/" <<  ka.y << "/" << ka.z << endl;
-    cout << "Kd: " << kd.x << "/" <<  kd.y << "/" << kd.z << endl;
-    cout << "Ks: " << ks.x << "/" <<  ks.y << "/" << ks.z << endl;
-    cout << "Ns: " << ns  << endl;
 }
 
 void Planets::Texture(const string textureFile){
@@ -185,11 +177,11 @@ void Planets::Send(void){
     for(int i = 0; i < 3; i++){
         glBindBuffer(GL_ARRAY_BUFFER, VBO[i]);
         if (i == 0)
-			glBufferStorage(GL_ARRAY_BUFFER, sizeof(BindVertex), BindVertex, 0);  //Info dos vertices - Inicializa o VBO (que está ativo) com dados imutáveis.
+			glBufferStorage(GL_ARRAY_BUFFER, sizeof(BindVertex), BindVertex, 0);
 		if (i == 1)
-			glBufferStorage(GL_ARRAY_BUFFER, sizeof(BindNormals), BindNormals, 0); //Info das normais - Inicializa o VBO (que está ativo) com dados imutáveis.
+			glBufferStorage(GL_ARRAY_BUFFER, sizeof(BindNormals), BindNormals, 0);
 		if (i == 2)
-			glBufferStorage(GL_ARRAY_BUFFER, sizeof(BindTextures), BindTextures, 0); //Info das posições das texturas - Inicializa o VBO (que está ativo) com dados imutáveis.
+			glBufferStorage(GL_ARRAY_BUFFER, sizeof(BindTextures), BindTextures, 0);
     }
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO[0]);
@@ -206,12 +198,6 @@ void Planets::Send(void){
 	glEnableVertexAttribArray(texturesId);
 
     glProgramUniform1i(shader, textureId, 0);
-    
-    cout << "shader: " << shader << endl;
-    cout << "vertex id: " << vertexId << endl;
-    cout << "normal id: " << normalsId << endl;
-    cout << "textures id: " << texturesId << endl;
-    cout << "texture id: " << textureId << endl;
 }
 
 
@@ -231,17 +217,17 @@ void Planets::Draw(vec3 position, vec3 orientation, mat4 modelMatrix){
 
 	mat4 modelView = Camera::GetInstance()->view * tempPlanet;
 	GLint modelViewId = glGetProgramResourceLocation(shader, GL_UNIFORM, "ModelView");
-	glProgramUniformMatrix4fv(shader, modelViewId, 1, GL_FALSE, glm::value_ptr(modelView));
+	glProgramUniformMatrix4fv(shader, modelViewId, 1, GL_FALSE, value_ptr(modelView));
 
 	mat3 normalMatrix = glm::inverseTranspose(glm::mat3(modelView));
 	GLint normalMatrixId = glGetProgramResourceLocation(shader, GL_UNIFORM, "NormalMatrix");
-	glProgramUniformMatrix4fv(shader, normalMatrixId, 1, GL_FALSE, glm::value_ptr(normalMatrix));
+	glProgramUniformMatrix4fv(shader, normalMatrixId, 1, GL_FALSE, value_ptr(normalMatrix));
 
 	GLint viewId = glGetProgramResourceLocation(shader, GL_UNIFORM, "View");
-	glProgramUniformMatrix4fv(shader, viewId, 1, GL_FALSE, glm::value_ptr(Camera::GetInstance()->view));
+	glProgramUniformMatrix4fv(shader, viewId, 1, GL_FALSE, value_ptr(Camera::GetInstance()->view));
 
 	GLint projectionId = glGetProgramResourceLocation(shader, GL_UNIFORM, "Projection");
-	glProgramUniformMatrix4fv(shader, projectionId, 1, GL_FALSE, glm::value_ptr(Camera::GetInstance()->projection));
+	glProgramUniformMatrix4fv(shader, projectionId, 1, GL_FALSE, value_ptr(Camera::GetInstance()->projection));
 
 	glBindTexture(GL_TEXTURE_2D, textureName + 1);
 
