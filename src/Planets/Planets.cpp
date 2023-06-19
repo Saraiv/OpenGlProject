@@ -93,8 +93,8 @@ void Planets::Material(const string fileName){
 
     while(getline(inFile, line)){
         istringstream iss(line);
-        std::string pre;
-		std::string nextFile;
+        string pre;
+		string nextFile;
 
 		iss >> pre;
 
@@ -198,6 +198,11 @@ void Planets::Send(void){
 	glEnableVertexAttribArray(texturesId);
 
     glProgramUniform1i(shader, textureId, 0);
+
+    GLenum error = glGetError();
+	if (error != GL_NO_ERROR) {
+		std::cout << "OpenGL Error: " << error << std::endl;                           
+	}
 }
 
 
@@ -219,7 +224,7 @@ void Planets::Draw(vec3 position, vec3 orientation, mat4 modelMatrix){
 	GLint modelViewId = glGetProgramResourceLocation(shader, GL_UNIFORM, "ModelView");
 	glProgramUniformMatrix4fv(shader, modelViewId, 1, GL_FALSE, value_ptr(modelView));
 
-	mat3 normalMatrix = glm::inverseTranspose(glm::mat3(modelView));
+	mat3 normalMatrix = inverseTranspose(mat3(modelView));
 	GLint normalMatrixId = glGetProgramResourceLocation(shader, GL_UNIFORM, "NormalMatrix");
 	glProgramUniformMatrix4fv(shader, normalMatrixId, 1, GL_FALSE, value_ptr(normalMatrix));
 

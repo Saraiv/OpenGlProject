@@ -429,4 +429,5 @@ CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: \
  /usr/include/c++/11/bits/sstream.tcc \
  /home/joosaraiva/Projects/C++/OpenGlProject/src/Planets/../Constants/Constants.hpp \
  /home/joosaraiva/Projects/C++/OpenGlProject/src/Shaders/Shaders.hpp \
- /home/joosaraiva/Projects/C++/OpenGlProject/src/Lights/Lights.hpp
+ /home/joosaraiva/Projects/C++/OpenGlProject/src/Lights/Lights.hpp \
+ /home/joosaraiva/Projects/C++/OpenGlProject/src/Background/Background.hpp

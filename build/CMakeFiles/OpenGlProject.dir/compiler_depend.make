@@ -2263,7 +2263,8 @@ CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: ../src/Source.cpp \
   /usr/include/c++/11/bits/sstream.tcc \
   ../src/Constants/Constants.hpp \
   ../src/Shaders/Shaders.hpp \
-  ../src/Lights/Lights.hpp
+  ../src/Lights/Lights.hpp \
+  ../src/Background/Background.hpp
 
 
 ../src/Source.cpp:
@@ -2389,6 +2390,8 @@ CMakeFiles/OpenGlProject.dir/src/Source.cpp.o: ../src/Source.cpp \
 /usr/include/c++/11/vector:
 
 /usr/include/glm/gtc/ulp.inl:
+
+../src/Background/Background.hpp:
 
 /usr/include/glm/gtc/ulp.hpp:
 

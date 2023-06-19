@@ -6,6 +6,7 @@
 #include "Planets/Planets.hpp"
 #include "Shaders/Shaders.hpp"
 #include "Lights/Lights.hpp"
+#include "Background/Background.hpp"
 
 #define WIDTH 800
 #define HEIGHT 600
@@ -15,6 +16,7 @@ using namespace glm;
 using namespace Cam;
 using namespace Planet;
 using namespace Light;
+using namespace BG;
 
 vector<vec3> planetPosition{
     vec3(0.0f, 0.0f, 0.0f),
@@ -27,9 +29,10 @@ vector<vec3> planetPosition{
     vec3(35.0f, 0.0f, 0.0f),
     vec3(40.0f, 0.0f, 0.0f)
 };
+
 mat4 planetMatrix = mat4(1.0f);
 float zoomLevel = 1.0f, angle = 0.0f;
-GLuint shader, vertexId, texturesId, normalsId, textureId;
+GLuint shader, shaderBackground, vertexId, texturesId, normalsId, textureId, backgroundTextureId;
 double lastMouseX = 0;
 double lastMouseY = 0;
 bool isMouseDragging = false;
@@ -107,11 +110,18 @@ int main(){
     neptune.Send();
     Lights(&neptune, shader);
 
+    Background bg;
+    // bg.GetPointersId(shaderBackground, backgroundTextureId);
+    // bg.Texture();
+    // bg.Send();
+
     while(!glfwWindowShouldClose(window)){
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         mat4 zoomMatrix = scale(mat4(1.0f), vec3(zoomLevel));
 
         glUseProgram(shader);
+        
+        // bg.Draw(vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 0.0f, 0.0f));
         sun.Draw(planetPosition[0], vec3(0.0f, 0.0f, 0.0f), planetMatrix * zoomMatrix);
         mercury.Draw(planetPosition[1], vec3(0.0f, 0.0f, 0.0f), planetMatrix * zoomMatrix);
         venus.Draw(planetPosition[2], vec3(0.0f, 0.0f, 0.0f), planetMatrix * zoomMatrix);
@@ -144,11 +154,22 @@ void InitPlanets(){
 	shader = LoadShaders(shaders);
 	glUseProgram(shader);
 
-	vertexId = glGetProgramResourceLocation(shader, GL_PROGRAM_INPUT, "VPosition");
-	textureId = glGetProgramResourceLocation(shader, GL_PROGRAM_INPUT, "texCoords");
-	normalsId = glGetProgramResourceLocation(shader, GL_PROGRAM_INPUT, "VNormals");
+	vertexId = glGetProgramResourceLocation(shader, GL_PROGRAM_INPUT, "VertexPosition");
+	texturesId = glGetProgramResourceLocation(shader, GL_PROGRAM_INPUT, "TextureCoords");
+	normalsId = glGetProgramResourceLocation(shader, GL_PROGRAM_INPUT, "VertexNormals");
 
 	textureId = glGetProgramResourceLocation(shader, GL_UNIFORM, "TextureSampler");
+
+    ShaderInfo shadersBackground[] = {
+        { GL_VERTEX_SHADER, backgroundVertPath.c_str() },
+        { GL_FRAGMENT_SHADER, backgroundFragPath.c_str() },
+        { GL_NONE, NULL }
+    };
+
+    shaderBackground = LoadShaders(shadersBackground);
+    glUseProgram(shaderBackground);
+
+    backgroundTextureId = glGetUniformLocation(shaderBackground, "BackgroundTexture");
 }
 
 void GraphicsInfo(){
@@ -163,7 +184,7 @@ void GraphicsInfo(){
     cout << "GLSL version: " << glslVersion << endl;
 }
 
-void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
+void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset){
 	float zoomAmount = 0.1f, minZoom = 0.1f,  maxZoom = 12.0f;;
 	zoomLevel += yoffset * zoomAmount;
 
@@ -174,8 +195,8 @@ void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
 		zoomLevel = maxZoom;
 }
 
-void MovePlanets(GLFWwindow* window, double xpos, double ypos) {
-	if (isMouseDragging) {
+void MovePlanets(GLFWwindow* window, double xpos, double ypos){
+	if (isMouseDragging){
 		double deltaX = xpos - lastMouseX;
         double deltaY = ypos - lastMouseY;
 
@@ -189,13 +210,13 @@ void MovePlanets(GLFWwindow* window, double xpos, double ypos) {
 	}
 }
 
-void OnClickCallback(GLFWwindow* window, int button, int action, int mods) {
-	if (button == GLFW_MOUSE_BUTTON_LEFT) {
+void OnClickCallback(GLFWwindow* window, int button, int action, int mods){
+	if (button == GLFW_MOUSE_BUTTON_LEFT){
 		if (action == GLFW_PRESS) {
 			isMouseDragging = true;
 			glfwGetCursorPos(window, &lastMouseX, &lastMouseY);
 		}
-		else if (action == GLFW_RELEASE) {
+		else if (action == GLFW_RELEASE){
 			isMouseDragging = false;
 		}
 	}
