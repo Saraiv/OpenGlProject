@@ -28,6 +28,7 @@ namespace Planet{
             void Texture(const string textureFile);
             void Send(void);
             void Draw(vec3 position, vec3 orientation, mat4 modelMatrix);
+            ~Planets();
             vec3 ka, kd, ks;
             GLfloat ns;
         private:

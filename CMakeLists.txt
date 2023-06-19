@@ -33,6 +33,8 @@ set(SOURCES
     ${CMAKE_SOURCE_DIR}/src/Shaders/Shaders.hpp
     ${CMAKE_SOURCE_DIR}/src/Lights/Lights.cpp
     ${CMAKE_SOURCE_DIR}/src/Lights/Lights.hpp
+    ${CMAKE_SOURCE_DIR}/src/Background/Background.cpp
+    ${CMAKE_SOURCE_DIR}/src/Background/Background.hpp
 )
 
 #Exec

@@ -25,6 +25,11 @@
   "file": "/home/joosaraiva/Projects/C++/OpenGlProject/src/Lights/Lights.cpp"
 },
 {
+  "directory": "/home/joosaraiva/Projects/C++/OpenGlProject/build",
+  "command": "/usr/bin/g++  -I/home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/include -g -o CMakeFiles/OpenGlProject.dir/src/Background/Background.cpp.o -c /home/joosaraiva/Projects/C++/OpenGlProject/src/Background/Background.cpp",
+  "file": "/home/joosaraiva/Projects/C++/OpenGlProject/src/Background/Background.cpp"
+},
+{
   "directory": "/home/joosaraiva/Projects/C++/OpenGlProject/build/lib/glfw/src/src",
   "command": "/usr/bin/gcc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/include -I/home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/src -I/home/joosaraiva/Projects/C++/OpenGlProject/build/lib/glfw/src/src -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/context.c.o -c /home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/src/context.c",
   "file": "/home/joosaraiva/Projects/C++/OpenGlProject/lib/glfw/src/context.c"

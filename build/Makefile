@@ -213,6 +213,30 @@ update_mappings/fast:
 	$(MAKE) $(MAKESILENT) -f lib/glfw/src/src/CMakeFiles/update_mappings.dir/build.make lib/glfw/src/src/CMakeFiles/update_mappings.dir/build
 .PHONY : update_mappings/fast
 
+src/Background/Background.o: src/Background/Background.cpp.o
+.PHONY : src/Background/Background.o
+
+# target to build an object file
+src/Background/Background.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/Background/Background.cpp.o
+.PHONY : src/Background/Background.cpp.o
+
+src/Background/Background.i: src/Background/Background.cpp.i
+.PHONY : src/Background/Background.i
+
+# target to preprocess a source file
+src/Background/Background.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/Background/Background.cpp.i
+.PHONY : src/Background/Background.cpp.i
+
+src/Background/Background.s: src/Background/Background.cpp.s
+.PHONY : src/Background/Background.s
+
+# target to generate assembly for a file
+src/Background/Background.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/src/Background/Background.cpp.s
+.PHONY : src/Background/Background.cpp.s
+
 src/Camera/Camera.o: src/Camera/Camera.cpp.o
 .PHONY : src/Camera/Camera.o
 
@@ -349,6 +373,9 @@ help:
 	@echo "... update_mappings"
 	@echo "... OpenGlProject"
 	@echo "... glfw"
+	@echo "... src/Background/Background.o"
+	@echo "... src/Background/Background.i"
+	@echo "... src/Background/Background.s"
 	@echo "... src/Camera/Camera.o"
 	@echo "... src/Camera/Camera.i"
 	@echo "... src/Camera/Camera.s"

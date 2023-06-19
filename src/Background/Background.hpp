@@ -26,61 +26,61 @@ namespace BG{
             void Texture();
             void Send(void);
             void Draw(vec3 position, vec3 orientation);
-
+            ~Background();
         private:
             GLuint VAO, VBO, texture, shader, backgroundTextureId;
             vector<string> textures = {
-                "Stars.jpg", "StarsMilkyWay.jpg", "Stars.jpg",
-                "StarsMilkyWay.jpg", "Stars.jpg", "StarsMilkyWay.jpg"
+                imagesPath + "Stars.jpg", imagesPath + "StarsMilkyWay.jpg", imagesPath + "Stars.jpg",
+                imagesPath + "StarsMilkyWay.jpg", imagesPath + "Stars.jpg", imagesPath + "StarsMilkyWay.jpg"
             };
             float vertex[6 * 2 * 3 * 3] = {
                 // Front face
-                -1.0f,  1.0f, -1.0f,
-                -1.0f, -1.0f, -1.0f,
-                1.0f, -1.0f, -1.0f,
-                1.0f, -1.0f, -1.0f,
-                1.0f,  1.0f, -1.0f,
-                -1.0f,  1.0f, -1.0f,
+                -60.0f,  60.0f, -60.0f,
+                -60.0f, -60.0f, -60.0f,
+                60.0f, -60.0f, -60.0f,
+                60.0f, -60.0f, -60.0f,
+                60.0f,  60.0f, -60.0f,
+                -60.0f,  60.0f, -60.0f,
 
                 // Back face
-                1.0f, -1.0f,  1.0f,
-                -1.0f, -1.0f,  1.0f,
-                -1.0f,  1.0f,  1.0f,
-                -1.0f,  1.0f,  1.0f,
-                1.0f,  1.0f,  1.0f,
-                1.0f, -1.0f,  1.0f,
+                60.0f, -60.0f,  60.0f,
+                -60.0f, -60.0f,  60.0f,
+                -60.0f,  60.0f,  60.0f,
+                -60.0f,  60.0f,  60.0f,
+                60.0f,  60.0f,  60.0f,
+                60.0f, -60.0f,  60.0f,
 
                 // Left face
-                -1.0f, -1.0f,  1.0f,
-                -1.0f, -1.0f, -1.0f,
-                -1.0f,  1.0f, -1.0f,
-                -1.0f,  1.0f, -1.0f,
-                -1.0f,  1.0f,  1.0f,
-                -1.0f, -1.0f,  1.0f,
+                -60.0f, -60.0f,  60.0f,
+                -60.0f, -60.0f, -60.0f,
+                -60.0f,  60.0f, -60.0f,
+                -60.0f,  60.0f, -60.0f,
+                -60.0f,  60.0f,  60.0f,
+                -60.0f, -60.0f,  60.0f,
 
                 // Right face
-                1.0f, -1.0f, -1.0f,
-                1.0f, -1.0f,  1.0f,
-                1.0f,  1.0f,  1.0f,
-                1.0f,  1.0f,  1.0f,
-                1.0f,  1.0f, -1.0f,
-                1.0f, -1.0f, -1.0f,
+                60.0f, -60.0f, -60.0f,
+                60.0f, -60.0f,  60.0f,
+                60.0f,  60.0f,  60.0f,
+                60.0f,  60.0f,  60.0f,
+                60.0f,  60.0f, -60.0f,
+                60.0f, -60.0f, -60.0f,
 
                 // Top face
-                -1.0f,  1.0f,  1.0f,
-                -1.0f,  1.0f, -1.0f,
-                1.0f,  1.0f, -1.0f,
-                1.0f,  1.0f, -1.0f,
-                1.0f,  1.0f,  1.0f,
-                -1.0f,  1.0f,  1.0f,
+                -60.0f,  60.0f,  60.0f,
+                -60.0f,  60.0f, -60.0f,
+                60.0f,  60.0f, -60.0f,
+                60.0f,  60.0f, -60.0f,
+                60.0f,  60.0f,  60.0f,
+                -60.0f,  60.0f,  60.0f,
 
                 // Bottom face
-                -1.0f, -1.0f, -1.0f,
-                -1.0f, -1.0f,  1.0f,
-                1.0f, -1.0f, -1.0f,
-                1.0f, -1.0f, -1.0f,
-                -1.0f, -1.0f,  1.0f,
-                1.0f, -1.0f,  1.0f
+                -60.0f, -60.0f, -60.0f,
+                -60.0f, -60.0f,  60.0f,
+                60.0f, -60.0f, -60.0f,
+                60.0f, -60.0f, -60.0f,
+                -60.0f, -60.0f,  60.0f,
+                60.0f, -60.0f,  60.0f
             };
     };
 }

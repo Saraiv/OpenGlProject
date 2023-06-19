@@ -115,12 +115,12 @@ lib/glfw/src/src/clean: lib/glfw/src/src/CMakeFiles/update_mappings.dir/clean
 CMakeFiles/OpenGlProject.dir/all: lib/glfw/src/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGlProject.dir/build.make CMakeFiles/OpenGlProject.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target OpenGlProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target OpenGlProject"
 .PHONY : CMakeFiles/OpenGlProject.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/OpenGlProject.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles 31
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OpenGlProject.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles 0
 .PHONY : CMakeFiles/OpenGlProject.dir/rule
@@ -167,7 +167,7 @@ lib/glfw/src/CMakeFiles/uninstall.dir/clean:
 lib/glfw/src/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/glfw/src/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/glfw/src/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31 "Built target glfw"
 .PHONY : lib/glfw/src/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
@@ -193,7 +193,7 @@ lib/glfw/src/src/CMakeFiles/glfw.dir/clean:
 lib/glfw/src/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/glfw/src/src/CMakeFiles/update_mappings.dir/build.make lib/glfw/src/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/glfw/src/src/CMakeFiles/update_mappings.dir/build.make lib/glfw/src/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles --progress-num=31 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joosaraiva/Projects/C++/OpenGlProject/build/CMakeFiles --progress-num=32 "Built target update_mappings"
 .PHONY : lib/glfw/src/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.

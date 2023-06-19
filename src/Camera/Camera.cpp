@@ -9,7 +9,7 @@ void Camera::InicializeCamera(float fov, float width, float height, vec3 positio
     this->target = target;
     vec3 camFront = position - target;
     vec3 camRight = cross(camFront, vec3(0.0f, 1.0f, 0.0f));
-    vec3 worldUp = -cross(camFront, camRight);
+    worldUp = -cross(camFront, camRight);
 
     target = position - normalize(camFront);
 
@@ -19,6 +19,33 @@ void Camera::InicializeCamera(float fov, float width, float height, vec3 positio
 
 void Camera::Update(){
     view = lookAt(vec3(position.x, position.y, position.z), target, vec3(0.0f, 1.0f, 0.0f));
+}
+
+void Camera::Move(Direction direction, float speed, double deltaTime){
+    vec3 cameraFront = normalize(target - position);
+    vec3 cameraRight = normalize(cross(cameraFront, worldUp));
+    vec3 cameraUp = cross(cameraRight, cameraFront);
+
+    float velocity = speed * deltaTime;
+
+    if (direction == Direction::FORWARD){
+        position += cameraFront * velocity;
+    }
+    else if (direction == Direction::BACKWARD){
+        position -= cameraFront * velocity;
+    }
+    else if (direction == Direction::LEFT){
+        position -= cameraRight * velocity;
+    }
+    else if (direction == Direction::RIGHT){
+        position += cameraRight * velocity;
+    }
+
+    position.x = glm::clamp(position.x, minX, maxX);
+    position.y = glm::clamp(position.y, minY, maxY);
+    position.z = glm::clamp(position.z, minZ, maxZ);
+
+    view = lookAt(position, target, worldUp);
 }
 
 void Camera::mouseCallback(GLFWwindow* window, double xpos, double ypos){

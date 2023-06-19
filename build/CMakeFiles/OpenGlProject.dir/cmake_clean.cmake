@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/OpenGlProject.dir/src/Background/Background.cpp.o"
+  "CMakeFiles/OpenGlProject.dir/src/Background/Background.cpp.o.d"
   "CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o"
   "CMakeFiles/OpenGlProject.dir/src/Camera/Camera.cpp.o.d"
   "CMakeFiles/OpenGlProject.dir/src/Lights/Lights.cpp.o"

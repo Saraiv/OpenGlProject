@@ -240,3 +240,9 @@ void Planets::Draw(vec3 position, vec3 orientation, mat4 modelMatrix){
 
 	glDrawArrays(GL_TRIANGLES, 0, vertex_positions.size());
 }
+
+Planets::~Planets(){
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, VBO);
+    glDeleteProgram(shader);
+}

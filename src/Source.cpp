@@ -1,6 +1,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <GL/gl.h>
+#include <cstdlib>
 
 #include "Camera/Camera.hpp"
 #include "Planets/Planets.hpp"
@@ -22,30 +23,31 @@ vector<vec3> planetPosition{
     vec3(0.0f, 0.0f, 0.0f),
     vec3(5.0f, 0.0f, 0.0f),
     vec3(10.0f, 0.0f, 0.0f),
-    vec3(15.0f, 0.0f, 0.0f),
+    vec3(-15.0f, 0.0f, 0.0f),
     vec3(20.0f, 0.0f, 0.0f),
-    vec3(25.0f, 0.0f, 0.0f),
+    vec3(-25.0f, 0.0f, 0.0f),
     vec3(30.0f, 0.0f, 0.0f),
-    vec3(35.0f, 0.0f, 0.0f),
-    vec3(40.0f, 0.0f, 0.0f)
+    vec3(-35.0f, 0.0f, 0.0f),
+    vec3(-40.0f, 0.0f, 0.0f)
 };
 
 mat4 planetMatrix = mat4(1.0f);
-float zoomLevel = 1.0f, angle = 0.0f;
+float zoomLevel = 1.0f, angle = 0.0f, movementSpeed = 1.0f;
 GLuint shader, shaderBackground, vertexId, texturesId, normalsId, textureId, backgroundTextureId;
-double lastMouseX = 0;
-double lastMouseY = 0;
+double lastMouseX = 0.0f, lastMouseY = 0.0f, deltaTime = 0.0f, lastFrameTime = 0.0f;
 bool isMouseDragging = false;
+Camera* cam;
 
 void InitPlanets();
+void MovePlanets();
 void GraphicsInfo();
 void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset);
 void MovePlanets(GLFWwindow* window, double xpos, double ypos);
 void OnClickCallback(GLFWwindow* window, int button, int action, int mods);
+void OnKeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
 int main(){
     GLFWwindow* window;
-    Camera* cam;
     cam = cam->GetInstance();
     cam->InicializeCamera(45.0f, WIDTH, HEIGHT, vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 0.0f, 0.0f));
 
@@ -59,6 +61,7 @@ int main(){
     glfwSetScrollCallback(window, ScrollCallback);
     glfwSetCursorPosCallback(window, MovePlanets);
 	glfwSetMouseButtonCallback(window, OnClickCallback);
+    glfwSetKeyCallback(window, OnKeyCallback);
 
     glewExperimental = GL_TRUE;
     glewInit();
@@ -111,17 +114,22 @@ int main(){
     Lights(&neptune, shader);
 
     Background bg;
-    // bg.GetPointersId(shaderBackground, backgroundTextureId);
-    // bg.Texture();
-    // bg.Send();
+    bg.GetPointersId(shaderBackground, backgroundTextureId);
+    bg.Texture();
+    bg.Send();
+
+    MovePlanets();
 
     while(!glfwWindowShouldClose(window)){
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         mat4 zoomMatrix = scale(mat4(1.0f), vec3(zoomLevel));
 
+        double currentFrameTime = glfwGetTime();
+        deltaTime = currentFrameTime - lastFrameTime;
+        lastFrameTime = currentFrameTime;
+
         glUseProgram(shader);
         
-        // bg.Draw(vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 0.0f, 0.0f));
         sun.Draw(planetPosition[0], vec3(0.0f, 0.0f, 0.0f), planetMatrix * zoomMatrix);
         mercury.Draw(planetPosition[1], vec3(0.0f, 0.0f, 0.0f), planetMatrix * zoomMatrix);
         venus.Draw(planetPosition[2], vec3(0.0f, 0.0f, 0.0f), planetMatrix * zoomMatrix);
@@ -131,6 +139,7 @@ int main(){
         saturn.Draw(planetPosition[6], vec3(0.0f, 0.0f, 0.0f), planetMatrix * zoomMatrix);
         uranus.Draw(planetPosition[7], vec3(0.0f, 0.0f, 0.0f), planetMatrix * zoomMatrix);
         neptune.Draw(planetPosition[8], vec3(0.0f, 0.0f, 0.0f), planetMatrix * zoomMatrix);
+        // bg.Draw(vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 0.0f, 0.0f));
 
         glfwSwapBuffers(window);
         glfwPollEvents();
@@ -141,7 +150,7 @@ int main(){
 }
 
 void InitPlanets(){
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    glClearColor(0.0f, 0.0f, 0.1f, 1.0f);
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
 
@@ -185,7 +194,7 @@ void GraphicsInfo(){
 }
 
 void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset){
-	float zoomAmount = 0.1f, minZoom = 0.1f,  maxZoom = 12.0f;;
+	float zoomAmount = 0.1f, minZoom = 0.1f,  maxZoom = 12.0f;
 	zoomLevel += yoffset * zoomAmount;
 
 	if (zoomLevel < minZoom)
@@ -220,4 +229,50 @@ void OnClickCallback(GLFWwindow* window, int button, int action, int mods){
 			isMouseDragging = false;
 		}
 	}
+}
+
+void OnKeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods){
+    if(action == GLFW_PRESS || action == GLFW_RELEASE){
+        switch(key){
+            case GLFW_KEY_W:
+                if(action == GLFW_PRESS)
+                    cam->Move(Camera::Direction::FORWARD, movementSpeed, deltaTime);
+                else
+                    cam->Move(Camera::Direction::FORWARD, 0.0f, deltaTime);
+                break;
+            case GLFW_KEY_A:
+                if(action == GLFW_PRESS)
+                    cam->Move(Camera::Direction::LEFT, movementSpeed, deltaTime);
+                else
+                    cam->Move(Camera::Direction::LEFT, 0.0f, deltaTime);
+                break;
+            case GLFW_KEY_D:
+                if(action == GLFW_PRESS)
+                    cam->Move(Camera::Direction::RIGHT, movementSpeed, deltaTime);
+                else
+                    cam->Move(Camera::Direction::RIGHT, 0.0f, deltaTime);
+                break;
+            case GLFW_KEY_S:
+                if(action == GLFW_PRESS)
+                    cam->Move(Camera::Direction::BACKWARD, movementSpeed, deltaTime);
+                else
+                    cam->Move(Camera::Direction::BACKWARD, 0.0f, deltaTime);
+                break;
+        }
+    }
+}
+
+void MovePlanets() {
+    float orbitRadius = 15.0f;
+
+    for (int i = 1; i < planetPosition.size(); ++i) {
+        float theta = static_cast<float>(rand()) / static_cast<float>(RAND_MAX) * 3.0f * pi<float>();
+        float phi = static_cast<float>(rand()) / static_cast<float>(RAND_MAX) * pi<float>();
+
+        float x = planetPosition[i].x;
+        float y = orbitRadius * sin(phi) * sin(theta);
+        float z = orbitRadius * cos(phi);
+
+        planetPosition[i] = vec3(x, y, z);
+    }
 }
